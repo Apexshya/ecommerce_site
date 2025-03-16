@@ -7,6 +7,8 @@ import Login from './Components/Login';
 import Signup from './Components/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 import Navbar from './Components/Navbar';
 import 'react-toastify/dist/ReactToastify.css';
 import { CartProvider } from './Components/CartContext'; 

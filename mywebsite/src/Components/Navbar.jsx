@@ -1,3 +1,5 @@
+// 
+
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
@@ -16,10 +18,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black py-3 shadow">
-      <div className="container">
+      <div className="container-fluid">
         <Link className="navbar-brand fw-bold text-white" to="/">
           <i className="bi bi-shop"></i> Ghar
         </Link>
+        
+        {/* Toggle Button for Small Screens */}
         <button
           className="navbar-toggler"
           type="button"
@@ -31,8 +35,11 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
+        {/* Collapsible Navbar Content */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          <form className="d-flex mx-auto w-50">
+          {/* Search Form (Visible on larger screens) */}
+          <form className="d-flex mx-auto w-50 d-none d-lg-flex">
             <input
               className="form-control me-2"
               type="search"
@@ -43,6 +50,8 @@ const Navbar = () => {
               <i className="bi bi-search"></i>
             </button>
           </form>
+
+          {/* Navbar Links */}
           <ul className="navbar-nav ms-auto">
             {userName ? (
               <>
@@ -62,6 +71,8 @@ const Navbar = () => {
                 </Link>
               </li>
             )}
+
+            {/* Cart Icon */}
             <li className="nav-item">
               <Link className="nav-link text-white position-relative" to="/cart">
                 <i className="bi bi-cart" style={{ fontSize: "1.5rem" }}></i>
